@@ -1,0 +1,39 @@
+.home-container {
+    background-image: url('https://novalab.bold-themes.com/nova-a/wp-content/uploads/sites/7/2020/06/hero-home-01.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-text {
+    font-size: 58px;
+    color: #1F3B64;
+    font-weight: bold;
+}
+.custom-text-color {
+    color: #33D1CB;
+}
+
+.home-details{
+    color: #1F3B64;
+    font-weight: 700;
+}
+.home-btn{
+    border-radius: 20px;
+    background-color: #1F3B64;
+    color: #33D1CB;
+    font-size: 20px;
+}
+
+/* service */
+.service-title{
+     color: #1F3B64;
+     font-weight: 800;
+     font-size: 18px;
+     border-bottom: #33D1CB solid 2px;
+     display: inline-block;
+}
+
+.custom-color-blue{
+    color: #204986;
+}

@@ -16,8 +16,8 @@ const Service = (props) => {
             <Card className="card-container h-100">
                 <Card.Img className="card-img" variant="top" src={photo} />
                 <Card.Body>
-                    <Card.Title>{title}</Card.Title>
-                    <Card.Text>
+                    <Card.Title className="custom-color-blue">{title}</Card.Title>
+                    <Card.Text className="card-details">
                         {description}
                     </Card.Text>
                 </Card.Body>

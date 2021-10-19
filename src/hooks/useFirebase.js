@@ -27,20 +27,6 @@ const useFirebase = () => {
         return signInWithPopup(auth, googleProvider);
     }
 
-    // observe user state change
-    useEffect(() => {
-        const unsubscribed = onAuthStateChanged(auth, user => {
-            if (user) {
-                setUser(user);
-            }
-            else {
-                setUser({})
-            }
-            setIsLoading(false);
-        });
-        return () => unsubscribed;
-    }, [])
-
     const logOut = () => {
         setIsLoading(true)
         signOut(auth)
@@ -48,33 +34,37 @@ const useFirebase = () => {
     }
 
     const processLogin = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                const { displayName, email, photoURL } = result.user;
-                const loggedInUser = {
-                    name: displayName,
-                    email: email,
-                    photo: photoURL
-                };
-                setUser(loggedInUser);
-                setError('');
-            })
-            .catch(error => {
-                setError(error.message);
-            })
+        setIsLoading(true);
+        // signInWithEmailAndPassword(auth, email, password)
+        //     .then(result => {
+        //         const { displayName, email, photoURL } = result.user;
+        //         const loggedInUser = {
+        //             name: displayName,
+        //             email: email,
+        //             photo: photoURL
+        //         };
+        //         setUser(loggedInUser);
+        //         setError('');
+        //     })
+        //     .catch(error => {
+        //         setError(error.message);
+        //     })
+        return signInWithEmailAndPassword(auth, email, password);
     }
 
     const registerNewUser = (email, password, name) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
-                const user = result.user;
-                console.log(user);
+                logOut()
                 setError('');
                 verifyEmail();
-                setUserName(name);
+                
             })
             .catch(error => {
                 setError(error.message);
+            })
+            .finally(() => {
+                setUserName(name);
             })
     }
 
@@ -90,6 +80,20 @@ const useFirebase = () => {
             })
     }
 
+    // observe user state change
+    useEffect(() => {
+        const unsubscribed = onAuthStateChanged(auth, user => {
+            if (user) {
+                setUser(user);
+            }
+            else {
+                setUser({})
+            }
+            setIsLoading(false);
+        });
+        return () => unsubscribed;
+    }, [])
+    
     return {
         user,
         isLoading,

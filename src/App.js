@@ -13,6 +13,7 @@ import PageNotFound from './components/NotFound/NotFound';
 import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Footer from './components/Footer/Footer';
+import About from './components/About/About';
 
 function App() {
   return (
@@ -33,12 +34,12 @@ function App() {
             <PrivateRoute path="/service/:serviceId">
               <ServiceDetails />
             </PrivateRoute>
-            {/* <Route path="/about">
-            <About />
-          </Route> */}
-            <Route path="/list">
-              <TestList />
+            <Route path="/about">
+              <About />
             </Route>
+            <PrivateRoute path="/list">
+              <TestList />
+            </PrivateRoute>
             <Route path="/login">
               <Login />
             </Route>

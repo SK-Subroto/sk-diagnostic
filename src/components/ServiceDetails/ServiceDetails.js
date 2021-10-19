@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Container, Row, Button } from 'react-bootstrap';
+import { Col, Container, Row, Button, Form } from 'react-bootstrap';
+import { CheckCircleFill } from 'react-bootstrap-icons';
 import { useParams } from 'react-router';
 import useServices from '../../hooks/useServices';
 import { addToDb } from '../../utilities/saveToLocal';
@@ -33,16 +34,20 @@ const ServiceDetails = () => {
         <Container style={{marginTop: 50}}>
             <Row className="pt-5">
                 <Col lg="6" className="d-flex justify-content-center">
-                    <img className="" style={{height: 350}} src={service?.photo} alt="" />
+                    <img className="" style={{height: 300, width: 400, borderRadius: 5}} src={service?.photo} alt="" />
                 </Col>
                 <Col lg="6">
-                    <h2>{service?.title}</h2>
-                    <p>{service?.description}</p>
-                    <h3>Cost: ${service?.price}</h3>
-                    <input onFocus={updateTestDate} type="date" name="" id="test-date" required />
-                    <br />
-                    <br />
-                    <Button onClick={handleAddToList}>Add To List</Button>
+                    <h2 className="custom-color-blue">{service?.title}</h2>
+                    <p className="card-details">{service?.description}</p>
+                    <div className="my-3">
+                        <p className="home-details"><CheckCircleFill className="custom-text-color" /> Control blood presure</p>
+                        <p className="home-details"><CheckCircleFill className="custom-text-color" /> Without take meal</p>
+                        <p className="home-details"><CheckCircleFill className="custom-text-color" /> Control diabetics</p>
+                    </div>
+                    <Form.Label>Select Date</Form.Label>
+                    <input className="form-control" style={{maxWidth: 215}} onFocus={updateTestDate} type="date" name="" id="test-date" required />
+                    <h3 className="text-success mt-2">Cost: ${service?.price}</h3>
+                    <Button className="mt-2 home-btn" onClick={handleAddToList}>Add To List</Button>
                 </Col>
             </Row>
         </Container>

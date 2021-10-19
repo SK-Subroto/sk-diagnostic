@@ -9,7 +9,7 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const { signInUsingGoogle, processLogin, setIsLoading, error } = useAuth();
+    const { signInUsingGoogle, processLogin, setIsLoading, error, setError } = useAuth();
     const location = useLocation();
     // console.log('came from:', location.state?.from)
     const history = useHistory();
@@ -36,8 +36,25 @@ const Login = () => {
 
     const handleSimpleSignIn = (e) => {
         e.preventDefault();
-        console.log(email, password);
-        processLogin(email, password);
+        // processLogin(email, password);
+        processLogin(email, password)
+            .then(result => {
+                // const { displayName, email, photoURL } = result.user;
+                // const loggedInUser = {
+                //     name: displayName,
+                //     email: email,
+                //     photo: photoURL
+                // };
+                // setUser(loggedInUser);
+                setError('');
+                history.push(redirect_url);
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+            .finally(() => {
+                setIsLoading(false);
+            });
     }
 
 

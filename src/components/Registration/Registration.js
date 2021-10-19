@@ -37,7 +37,7 @@ const Registration = () => {
         }
         else {
             registerNewUser(email, password, name);
-
+            history.push('/login');
         }
     }
 
