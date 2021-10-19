@@ -37,3 +37,8 @@
 .custom-color-blue{
     color: #204986;
 }
+
+.client-img{
+    width: 100px;
+    margin: 15px auto;
+}
