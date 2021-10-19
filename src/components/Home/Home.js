@@ -13,7 +13,7 @@ const Home = () => {
         history.push('/services');
     }
  
-    // fetch course
+    // fetch service
     useEffect(() => {
         fetch('../services.json')
             .then(res => res.json())
@@ -39,7 +39,7 @@ const Home = () => {
                             </div>
                         </Col>
                         <Col lg="6">
-                            {/* <img className="img-fluid" src="https://novalab.bold-themes.com/nova-a/wp-content/uploads/sites/7/2020/06/hero-home-01.jpg" alt="" /> */}
+                            
                         </Col>
                     </Row>
                 </Container>

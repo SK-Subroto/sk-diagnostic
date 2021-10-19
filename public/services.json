@@ -13,7 +13,7 @@
         "description": "A creatinine test is a measure of how well your kidneys are performing their job of filtering waste from your blood.",
         "category": "Backend",
         "photo": "https://novalab.bold-themes.com/nova-a/wp-content/uploads/sites/7/2020/03/service_3.jpg",
-        "price": 3100
+        "price": 100
     },
     {
         "id": "S003",
@@ -43,7 +43,7 @@
         "title": "covid-19",
         "description": "Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.",
         "photo": "https://www.hopkinsmedicine.org/sebin/d/a/Lab%20technician%20holding%20swap%20GettyImages-1222940733%20SMALL.jpg",
-        "price": 1000
+        "price": 70
     },
     {
         "id": "S007",

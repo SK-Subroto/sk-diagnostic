@@ -4,11 +4,13 @@ import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import { clearTheCart } from '../../utilities/saveToLocal';
+import ThubmsUp from '../../images/thumbsUp.gif'
 
 const Conformation = () => {
     const {user} = useAuth();
     const history = useHistory();
 
+    // pop up modal state 
     const [show, setShow] = useState(false);
 
     const handleClose = () => {
@@ -84,7 +86,7 @@ const Conformation = () => {
                     <Modal.Title className="custom-color-blue">Done</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="text-center">
-                    <img height="200" src="https://cliply.co/wp-content/uploads/2020/08/432008120_THUMBS_UP_3D_DARK_SKIN_TONE_400px.gif" alt="" />
+                    <img height="200" src={ThubmsUp} alt="" />
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="success" onClick={handleClose}>

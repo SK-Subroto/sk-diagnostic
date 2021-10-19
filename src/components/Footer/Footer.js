@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import './Footer.css'
 import apple from '../../images/Apple-logo.png';
 import google from '../../images/google-play-store-logo.png';
+import { Facebook, Globe, HouseDoor, Telephone, Whatsapp } from 'react-bootstrap-icons';
 
 const Footer = () => {
     return (
@@ -16,11 +17,22 @@ const Footer = () => {
                         </div>
                         <div className="footer-sec d-flex flex-wrap">
                             <p>About</p>
-                            <p>Features</p>
-                            <p>Pricing</p>
-                            <p>Courses</p>
+                            <p>Report</p>
+                            <p>Cost</p>
+                            <p>Service</p>
                             <p>Help</p>
                             <p>Privacy Policy</p>
+                        </div>
+                        <div>
+                            <div>
+                                <b className="me-2">Hotline: </b> <Telephone /> 824145
+                            </div>
+                            <div className="my-3">
+                                <b className="me-2">Address: </b> <HouseDoor /> 28A, NewYork, USA
+                            </div>
+                            <Facebook className="fs-4 me-3" />
+                            <Whatsapp className="fs-4 me-3" />
+                            <Globe className="fs-4" />
                         </div>
                     </Col>
                     <Col lg="6" className="d-flex justify-content-start justify-content-lg-center">
@@ -45,7 +57,7 @@ const Footer = () => {
                         </div>
                     </Col>
                     <Col lg="6" className="text-center text-lg-start pb-4">
-                        <small className="">© 2021 SK Academy. All rights reserved</small>
+                        <small className="">© 2021 SK Diagnostic. All rights reserved</small>
                     </Col>
                 </Row>
             </Container>

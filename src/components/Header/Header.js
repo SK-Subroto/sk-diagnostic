@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Container, Nav, Navbar, Button, Badge, Dropdown } from 'react-bootstrap';
 import { BagPlus, ListUl, Person, Power } from 'react-bootstrap-icons';
 import { NavLink } from 'react-router-dom';
@@ -6,12 +6,10 @@ import { useHistory } from 'react-router';
 import './Header.css'
 import blankProfile from '../../images/blank-profile.png';
 import useAuth from '../../hooks/useAuth';
-import useServices from '../../hooks/useServices';
-import useList from '../../hooks/useList';
+
 
 const Header = () => {
-    const [services] = useServices();
-    const [list, setList] = useList(services);
+ 
     const { user, logOut } = useAuth();
     const history = useHistory();
 
@@ -24,9 +22,7 @@ const Header = () => {
         color: "#33D1CB",
         borderBottom: "solid 2px #33D1CB"
     }
-    // useEffect(() => {
-    //     console.log(Object.keys(getStoredCart()).length)
-    // }, [list])
+
     return (
 
         <Navbar bg="light" expand="lg" fixed="top" className="shadow-sm">
@@ -47,8 +43,8 @@ const Header = () => {
                         <Nav.Link as={NavLink} activeStyle={activeStyle} to="/home">Home</Nav.Link>
                         <Nav.Link as={NavLink} activeStyle={activeStyle} to="/services">Services</Nav.Link>
                         <Nav.Link as={NavLink} activeStyle={activeStyle} to="/about">About</Nav.Link>
-                        <Nav.Link as={NavLink} activeStyle={activeStyle} to="/list"><BagPlus /> Review Test <Badge bg="success">{list.length}</Badge></Nav.Link>
-                        {/* <Nav.Link as={NavLink} activeStyle={activeStyle} to="/login">Login <Person /></Nav.Link> */}
+                        <Nav.Link as={NavLink} activeStyle={activeStyle} to="/list"><BagPlus /> Review Test</Nav.Link>
+                        {/* toggle loging logout  */}
                         {!user?.email ?
                             <Nav.Link as={NavLink} activeStyle={activeStyle} to="/login">Login <Person /></Nav.Link>
                             :

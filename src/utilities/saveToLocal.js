@@ -8,7 +8,6 @@ const addToDb = (id, date) => {
     else {
         shopping_cart = JSON.parse(exists);
         if (shopping_cart[id]) {
-            // const newCount = shopping_cart[id] + 1;
             shopping_cart[id] = date;
         }
         else {

@@ -16,14 +16,6 @@ const useFirebase = () => {
         setIsLoading(true);
         const googleProvider = new GoogleAuthProvider();
 
-        // signInWithPopup(auth, googleProvider)
-        //     .then(result => {
-        //         console.log(result.user)
-        //         setUser(result.user)
-        //     })
-        //     .finally(() => {
-        //         setIsLoading(false);
-        //     });
         return signInWithPopup(auth, googleProvider);
     }
 
@@ -35,20 +27,6 @@ const useFirebase = () => {
 
     const processLogin = (email, password) => {
         setIsLoading(true);
-        // signInWithEmailAndPassword(auth, email, password)
-        //     .then(result => {
-        //         const { displayName, email, photoURL } = result.user;
-        //         const loggedInUser = {
-        //             name: displayName,
-        //             email: email,
-        //             photo: photoURL
-        //         };
-        //         setUser(loggedInUser);
-        //         setError('');
-        //     })
-        //     .catch(error => {
-        //         setError(error.message);
-        //     })
         return signInWithEmailAndPassword(auth, email, password);
     }
 
@@ -73,6 +51,7 @@ const useFirebase = () => {
             .then(result => { })
     }
 
+    // send verify email 
     const verifyEmail = () => {
         sendEmailVerification(auth.currentUser)
             .then(result => {
