@@ -78,7 +78,7 @@ const Login = () => {
                             <Link className="text-center" to="/registration">Create a new account</Link>
                             <hr />
                             <p className="text-center">OR</p>
-                            <Button className="text-success" variant="light" onClick={handleGoogleSignIn}>
+                            <Button className="text-white" variant="success" onClick={handleGoogleSignIn}>
                                 <Google /> <span className="fw-bold">Sign In With Google</span>
                             </Button>
                         </div>

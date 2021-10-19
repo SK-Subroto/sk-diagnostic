@@ -72,7 +72,7 @@ const Registration = () => {
                             <Link to="/login" className="text-center mt-2">Already have an account</Link>
                             <hr />
                             <p className="text-center">OR</p>
-                            <Button className="text-success" variant="light">
+                            <Button className="text-white" variant="success">
                                 <Google /> <span className="fw-bold">Sign In With Google</span>
                             </Button>
                         </div>
