@@ -1,0 +1,62 @@
+[
+    {
+        "id": "S001",
+        "title": "Complete Blood Count(CBC)",
+        "description": "A complete blood count, also known as a full blood count, is a set of medical laboratory tests that provide information about the cells in a person's blood, hemogram",
+        "category": "Backend",
+        "photo": "https://apollohealthlib.blob.core.windows.net/health-library/2021/07/shutterstock_1704731518-scaled.jpg",
+        "price": 10
+    },
+    {
+        "id": "S002",
+        "title": "Serum Creatinine",
+        "description": "A creatinine test is a measure of how well your kidneys are performing their job of filtering waste from your blood.",
+        "category": "Backend",
+        "photo": "https://novalab.bold-themes.com/nova-a/wp-content/uploads/sites/7/2020/03/service_3.jpg",
+        "price": 3100
+    },
+    {
+        "id": "S003",
+        "title": "Serum Glutamic Pyruvic Transaminase(SGPT)",
+        "description": "Alanine transaminase is a transaminase enzyme. It is also called alanine aminotransferase and was formerly called serum glutamate-pyruvate transaminase.",
+        "category": "Fontend",
+        "photo": "https://www.gunnaresiason.com/wp-content/uploads/2020/06/blood-tests.jpg",
+        "price": 100
+    },
+    {
+        "id": "S004",
+        "title": "Alkaline phosphatase",
+        "description": "Alkaline phosphatase, or basic phosphatase, is a homodimeric protein enzyme of 86 kilodaltons. Each monomer contains five cysteine residues",
+        "category": "Fontend",
+        "photo": "https://images.medicinenet.com/images/article/main_image/sedimentation-rate.jpg",
+        "price": 40
+    },
+    {
+        "id": "S005",
+        "title": "Bilirubin",
+        "description": "Bilirubin is a red-orange compound that occurs in the normal catabolic pathway that breaks down heme in vertebrates.",
+        "photo": "https://2rdnmg1qbg403gumla1v9i2h-wpengine.netdna-ssl.com/wp-content/uploads/sites/3/2017/12/bloodTestMetabolism-1132208490-770x533-1-650x428.jpg",
+        "price": 80
+    },
+    {
+        "id": "S006",
+        "title": "covid-19",
+        "description": "Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.",
+        "photo": "https://www.hopkinsmedicine.org/sebin/d/a/Lab%20technician%20holding%20swap%20GettyImages-1222940733%20SMALL.jpg",
+        "price": 1000
+    },
+    {
+        "id": "S007",
+        "title": "Human leukocyte antigen B27(HLA-B27)",
+        "description": "Human leukocyte antigen B27 is a class I surface antigen encoded by the B locus in the major histocompatibility complex.",
+        "photo": "https://study.com/cimages/course-image/mlt-ascp-medical-laboratory-technician-study-guide-exam-prep_649753_large.jpeg",
+        "price": 40
+    },
+    {
+        "id": "S008",
+        "title": "Hepatitis B Surface Antigen",
+        "description": "his test looks for hepatitis B surface antigens in your blood. The test is used to find out whether you have a recent or long-standing infection from the hepatitis B virus (HBV).",
+        "photo": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/01/GettyImages-1132896975_hero-1200x628.jpg",
+        "price": 50
+    }
+]

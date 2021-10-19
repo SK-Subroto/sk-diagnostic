@@ -1,0 +1,23 @@
+/* footer */
+.footer{
+    margin-top: 139px;
+    background-color: #264653;
+    color: #FFFFFF;
+}
+.footer-container{
+    padding: 56px 0;
+}
+.footer .footer-sec p{
+    margin-right: 25px;
+}
+.app img{
+    width: 30px;
+    height: 30px;
+}
+.ios, .android{
+    width: 164px;
+    height: 50px;
+    border: #FFFFFF solid 1px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
