@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import { clearTheCart } from '../../utilities/saveToLocal';
-import ThubmsUp from '../../images/thumbsUp.gif'
+import ThubmsUp from '../../images/Thumbs-Up.gif'
 
 const Conformation = () => {
     const {user} = useAuth();

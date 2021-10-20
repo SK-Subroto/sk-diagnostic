@@ -46,7 +46,7 @@ const Header = () => {
                         <Nav.Link as={NavLink} activeStyle={activeStyle} to="/list"><BagPlus /> Review Test</Nav.Link>
                         {/* toggle loging logout  */}
                         {!user?.email ?
-                            <Nav.Link as={NavLink} activeStyle={activeStyle} to="/login">Login <Person /></Nav.Link>
+                            <Nav.Link as={NavLink} activeStyle={activeStyle} to="/login"><Person /> Login</Nav.Link>
                             :
                             <Dropdown>
                                 <Dropdown.Toggle variant="white" id="dropdown-basic">

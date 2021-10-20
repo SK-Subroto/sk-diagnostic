@@ -22,14 +22,14 @@ const Home = () => {
     return (
         <Container fluid>
             <section className="home-container">
-                <Container>
+                <Container id="home">
                     <Row className="">
-                        <Col lg="6">
+                        <Col lg="8">
                             <div className="" style={{ marginTop: 100 }}>
                                 <h1 className="mt-5 home-text"><span className="custom-text-color">SK Diagnostic</span> for Medical Testing</h1>
-                                <div className="my-5">
+                                <div className="my-5 fs-5">
                                     <p className="home-details"><CheckCircleFill className="custom-text-color" /> Led by Passionate Experts</p>
-                                    <p className="home-details"><CheckCircleFill className="custom-text-color" /> Safe diagnoses and effective therapies</p>
+                                    <p className="home-details"><CheckCircleFill className="custom-text-color" /> Safe diagnoses and effective</p>
                                     <p className="home-details"><CheckCircleFill className="custom-text-color" /> Affordable Health Packages</p>
                                 </div>
                                 <Button
@@ -38,7 +38,7 @@ const Home = () => {
                                 >Browse Service</Button>
                             </div>
                         </Col>
-                        <Col lg="6">
+                        <Col lg="4">
 
                         </Col>
                     </Row>
@@ -46,7 +46,7 @@ const Home = () => {
             </section>
 
             {/* services  */}
-            <Container>
+            <Container id="services">
                 <div className="text-center mt-5">
                     <p className="service-title">SERVICES</p>
                     <h1 className="custom-color-blue mb-5">Laboratory Diagnostics</h1>
@@ -56,6 +56,12 @@ const Home = () => {
                         services.slice(0, 6).map(service => <Service key={service.id} service={service} />)
                     }
                 </Row>
+                <div className="mt-4 text-end">
+                    <Button
+                        className="py-2 mb-4 home-btn"
+                        onClick={handleBrowseService}
+                    >More Services</Button>
+                </div>
             </Container>
             
             {/* customer review  */}
@@ -98,7 +104,7 @@ const Home = () => {
             </section>
 
             {/* contact us  */}
-            <Container className="mt-5  px-lg-5">
+            <Container className="mt-5  px-lg-5" id="contact">
                 <h1 className="text-center custom-color-blue mb-5">Contact Us</h1>
                 <Row className="g-3">
                     <Col lg="6" className="px-3">
@@ -121,7 +127,7 @@ const Home = () => {
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label className="fs-4">Text</Form.Label>
                                     <FloatingLabel controlId="floatingTextarea" label="Comments" className="mb-3">
-                                        <Form.Control as="textarea" placeholder="Leave a comment here" />
+                                        <Form.Control className="rounded-pill" as="textarea" placeholder="Leave a comment here" />
                                     </FloatingLabel>
                                 </Form.Group>
 
